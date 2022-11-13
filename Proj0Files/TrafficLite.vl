@@ -1,0 +1,22 @@
+module TrafficLite (
+    input EWCar,
+    input NSCar,
+    input clock,
+    output EWLite,
+    output NSLite
+);
+
+reg state;
+
+initial state=0;
+
+assign NSLite = ~ state;
+assign EWLite = state;
+
+always @(posedge clock) begin
+    case (state)
+        0: state = EWCar;
+        1: state = NSCar;
+    endcase
+end
+endmodule
