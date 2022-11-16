@@ -1,6 +1,6 @@
-`include "alu_top.v"
-`include "alu_core.v"
-`include "alu_control.v"
+`include "Proj0Files/alu_top.v"
+`include "Proj0Files/alu_core.v"
+`include "Proj0Files/alu_control.v"
 
 module alu_top_tb;
 
