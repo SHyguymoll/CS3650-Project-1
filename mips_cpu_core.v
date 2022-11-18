@@ -1,5 +1,17 @@
 module MIPS_Cpu_Core #(
-    parameters
+    opcode,
+    reg_dest,
+    alu_op,
+
+)
+
+Alu_Top alu_top (
+    .opcode (opcode),
+    func_field,
+    A,
+    B,
+    result,
+    zero
 )
     //determine what each of them will do in this case
     
