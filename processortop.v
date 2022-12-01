@@ -1,3 +1,7 @@
+`include "instrn_memory.mem"
+`include "data_memory.mem"
+`include "reg_memory.mem"
+
 module Processor_Top(
     clk,
     rst_n

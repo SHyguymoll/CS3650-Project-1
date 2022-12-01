@@ -1,4 +1,13 @@
-module Processor_Top_tb;
+`include "progcount.v"
+`include "processortop.v"
+`include "instmem.v"
+`include "datmem.v"
+`include "regfile.v"
+`include "shift.v"
+`include "ctrllogic.v"
+`include "signextend.v"
+
+module processor_top_tb;
 
 // Inputs
 reg clk;
