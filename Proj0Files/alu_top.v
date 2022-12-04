@@ -1,4 +1,7 @@
-module alu_top(
+`include "Proj0Files/alu_core.v"
+`include "Proj0Files/alu_control.v"
+
+module Alu_Top(
     opcode,
     func_field,
     A,

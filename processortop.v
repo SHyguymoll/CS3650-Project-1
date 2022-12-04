@@ -1,6 +1,11 @@
-`include "instrn_memory.mem"
-`include "data_memory.mem"
-`include "reg_memory.mem"
+`include "progcount.v"
+`include "instmem.v"
+`include "regfile.v"
+`include "signextend.v"
+`include "shift.v"
+`include "Proj0Files/alu_top.v"
+`include "datmem.v"
+`include "ctrllogic.v"
 
 module Processor_Top(
     clk,
@@ -76,7 +81,7 @@ Sign_Extension sign_ext (
 Shifter shifter (
     .indata (sign_ext_out),
     .shift_amt(2'd2),
-    shift_right(1'b1),
+    .shift_right(1'b1),
     .outdata (branch_addr_offset)
 );
 

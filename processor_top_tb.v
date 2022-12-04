@@ -1,11 +1,4 @@
-`include "progcount.v"
 `include "processortop.v"
-`include "instmem.v"
-`include "datmem.v"
-`include "regfile.v"
-`include "shift.v"
-`include "ctrllogic.v"
-`include "signextend.v"
 
 module processor_top_tb;
 
@@ -19,19 +12,17 @@ Processor_Top uut(
     .rst_n(rst_n)
 );
 
-always #5 clk = ~clk
+always #5 clk = ~clk;
 
 initial begin
     $dumpfile("processor_top_tb.vcd");
     $dumpvars(0, processor_top_tb);
-
     clk = 1'b1;
     rst_n = 1'b0;
     #30
-    rst_n = 1'b1
+    rst_n = 1'b1;
     #70
     $finish;
-
 end
 
 endmodule

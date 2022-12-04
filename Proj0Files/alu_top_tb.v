@@ -1,6 +1,4 @@
 `include "Proj0Files/alu_top.v"
-`include "Proj0Files/alu_core.v"
-`include "Proj0Files/alu_control.v"
 
 module alu_top_tb;
 
@@ -15,7 +13,7 @@ wire [31:0] result;
 wire zero;
 
 // Instantiate the Unit Under Test (UUT)
-alu_top uut (
+Alu_Top uut (
     .opcode(opcode),
     .func_field(func_field),
     .A(A),

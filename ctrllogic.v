@@ -1,4 +1,4 @@
-Module Control_Logic(
+module Control_Logic(
     instrn,
     instrn_opcode,
     address_plus_4,
