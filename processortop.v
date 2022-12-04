@@ -6,6 +6,7 @@
 `include "Proj0Files/alu_top.v"
 `include "datmem.v"
 `include "ctrllogic.v"
+`include "adder.v"
 
 module Processor_Top(
     clk,
@@ -81,7 +82,7 @@ Sign_Extension sign_ext (
 Shifter shifter (
     .indata (sign_ext_out),
     .shift_amt(2'd2),
-    .shift_right(1'b1),
+    .shift_left(1'b1),
     .outdata (branch_addr_offset)
 );
 
